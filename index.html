@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba Historia 3° Básico - Unidad 1</title>
+  <style>
+    :root {
+      --bg: #f6f8fc;
+      --card: #ffffff;
+      --ink: #1a2a33;
+      --muted: #5a6b77;
+      --accent: #136f63;
+      --accent-soft: #e8f5f2;
+      --ok: #17643a;
+      --bad: #9c2f2f;
+      --line: #d8e0e6;
+      --shadow: 0 12px 28px rgba(14, 38, 54, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #eef5fb 0%, var(--bg) 42%, #f9fbff 100%);
+      color: var(--ink);
+      font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
+      line-height: 1.4;
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 16px 48px;
+    }
+
+    .hero {
+      background: radial-gradient(circle at 12% 0%, #eaf8ef, #edf3fd 45%, #ffffff 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 1.55rem;
+      letter-spacing: .2px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: .98rem;
+    }
+
+    .sources {
+      margin-top: 12px;
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: #123a36;
+      font-size: .92rem;
+    }
+
+    .sources a {
+      color: #0c5f95;
+      text-decoration: none;
+    }
+
+    .sources a:hover { text-decoration: underline; }
+
+    .img-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin: 14px 0 0;
+    }
+
+    figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      background: #f1f5f8;
+    }
+
+    .question-figure {
+      margin: 8px 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .question-figure img {
+      width: 100%;
+      max-height: 230px;
+      object-fit: contain;
+      display: block;
+      background: #fbfdff;
+    }
+
+    .question-figure figcaption {
+      padding: 7px 9px;
+      font-size: .84rem;
+    }
+
+    figcaption {
+      padding: 8px 10px;
+      font-size: .88rem;
+      color: #485966;
+    }
+
+    form {
+      margin-top: 16px;
+    }
+
+    .question {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 8px 18px rgba(20, 40, 70, 0.04);
+    }
+
+    .question h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .q-tag {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: .76rem;
+      color: #2f4d62;
+      background: #edf4fa;
+    }
+
+    .options {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      display: flex;
+      gap: 8px;
+      align-items: start;
+      cursor: pointer;
+      font-size: .96rem;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      max-width: 350px;
+      padding: 9px 10px;
+      border-radius: 10px;
+      border: 1px solid #bccad4;
+      font-size: .96rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-size: .95rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    #btnEvaluar {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    #btnReiniciar {
+      background: #dfe9ef;
+      color: #1f3846;
+    }
+
+    .results {
+      display: none;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 0 8px 8px 0;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .ok { background: #eaf8ef; color: var(--ok); }
+    .bad { background: #fdecec; color: var(--bad); }
+    .neutral { background: #eef4fb; color: #1e4f74; }
+
+    .review {
+      margin-top: 10px;
+      border-top: 1px dashed var(--line);
+      padding-top: 10px;
+      font-size: .94rem;
+    }
+
+    .item-ok { color: var(--ok); }
+    .item-bad { color: var(--bad); }
+
+    .improve {
+      margin-top: 12px;
+      background: #fff9e8;
+      border: 1px solid #f0dfac;
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: #6a5310;
+    }
+
+    .footer-note {
+      margin-top: 14px;
+      color: #5f6d79;
+      font-size: .86rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Prueba de Historia y Geografía - 3° Básico</h1>
+      <p class="subtitle">Unidad 1: cuadrículas, planos, planisferio, puntos cardinales, paralelos y meridianos.</p>
+      <div class="sources">
+        Contenido reforzado con referencias educativas en línea:
+        <a href="https://es.wikipedia.org/wiki/Punto_cardinal" target="_blank" rel="noopener">puntos cardinales</a>,
+        <a href="https://es.wikipedia.org/wiki/Paralelo_(geograf%C3%ADa)" target="_blank" rel="noopener">paralelos</a> y
+        <a href="https://es.wikipedia.org/wiki/Meridiano_(geograf%C3%ADa)" target="_blank" rel="noopener">meridianos</a>.
+      </div>
+      <div class="img-row">
+        <figure>
+          <img src="img-rosa-vientos.svg" alt="Rosa de los vientos con puntos cardinales">
+          <figcaption>Rosa de los vientos: Norte, Sur, Este y Oeste.</figcaption>
+        </figure>
+        <figure>
+          <img src="img-paralelos-meridianos.svg" alt="Paralelos y meridianos en un globo">
+          <figcaption>Paralelos (horizontales) y meridianos (verticales).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <form id="quizForm"></form>
+
+    <div class="actions">
+      <button id="btnEvaluar" type="button">Revisar prueba</button>
+      <button id="btnReiniciar" type="button">Limpiar respuestas</button>
+    </div>
+
+    <section id="resultados" class="results" aria-live="polite"></section>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        id: "q1",
+        topic: "Puntos cardinales",
+        type: "radio",
+        prompt: "1) ¿Cuáles son los 4 puntos cardinales principales?",
+        options: [
+          "Norte, Sur, Este y Oeste",
+          "Arriba, abajo, izquierda y derecha",
+          "Norte, Sur, Noreste y Suroeste"
+        ],
+        answer: "Norte, Sur, Este y Oeste",
+        explain: "Memorizar y reconocer los 4 puntos cardinales principales."
+      },
+      {
+        id: "q2",
+        topic: "Rosa de los vientos",
+        type: "radio",
+        prompt: "2) ¿Cómo se llama el dibujo que usamos para representar los puntos cardinales?",
+        options: ["Brújula de reloj", "Rosa de los vientos", "Planisferio político"],
+        answer: "Rosa de los vientos",
+        explain: "Relacionar el nombre del esquema de orientación."
+      },
+      {
+        id: "q3",
+        topic: "Cuadrícula",
+        type: "radio",
+        prompt: "3) En una cuadrícula, las líneas horizontales se llaman...",
+        options: ["Columnas", "Filas", "Cuadros"],
+        answer: "Filas",
+        explain: "Recordar diferencia entre fila (horizontal) y columna (vertical)."
+      },
+      {
+        id: "q4",
+        topic: "Cuadrícula",
+        type: "radio",
+        prompt: "4) En una cuadrícula, las líneas verticales se llaman...",
+        options: ["Columnas", "Filas", "Bordes"],
+        answer: "Columnas",
+        explain: "Recordar diferencia entre columna (vertical) y fila (horizontal)."
+      },
+      {
+        id: "q5",
+        topic: "Plano",
+        type: "radio",
+        prompt: "5) Un plano puede servir para...",
+        options: [
+          "Mostrar los planetas del sistema solar",
+          "Representar espacios como una casa y ubicar piezas",
+          "Medir la temperatura del clima"
+        ],
+        answer: "Representar espacios como una casa y ubicar piezas",
+        explain: "Comprender para qué se usa un plano en la vida diaria."
+      },
+      {
+        id: "q6",
+        topic: "Continentes",
+        type: "text",
+        prompt: "6) ¿Cuántos continentes se estudian en este temario? (escribe solo el número)",
+        answer: "6",
+        explain: "Reforzar que en este curso se trabajan 6 continentes."
+      },
+      {
+        id: "q7",
+        topic: "Océanos",
+        type: "text",
+        prompt: "7) ¿Cuántos océanos se estudian en este temario? (escribe solo el número)",
+        answer: "5",
+        explain: "Reforzar cantidad de océanos del temario."
+      },
+      {
+        id: "q8",
+        topic: "Paralelos",
+        type: "radio",
+        prompt: "8) ¿Qué enunciado es correcto sobre los paralelos?",
+        options: [
+          "Son líneas imaginarias horizontales",
+          "Son líneas imaginarias verticales",
+          "Unen los polos de la Tierra"
+        ],
+        answer: "Son líneas imaginarias horizontales",
+        explain: "Identificar que los paralelos son horizontales."
+      },
+      {
+        id: "q9",
+        topic: "Meridianos",
+        type: "radio",
+        prompt: "9) ¿Qué enunciado es correcto sobre los meridianos?",
+        options: [
+          "Son líneas imaginarias verticales que pasan por los polos",
+          "Son líneas horizontales que cortan el ecuador",
+          "Solo existen dos meridianos"
+        ],
+        answer: "Son líneas imaginarias verticales que pasan por los polos",
+        explain: "Identificar que los meridianos son verticales y pasan por polos."
+      },
+      {
+        id: "q10",
+        topic: "Hemisferios",
+        type: "radio",
+        prompt: "10) La línea del Ecuador (0°) divide la Tierra en...",
+        options: [
+          "Hemisferio Este y Hemisferio Oeste",
+          "Hemisferio Norte y Hemisferio Sur",
+          "Zona tropical y zona polar"
+        ],
+        answer: "Hemisferio Norte y Hemisferio Sur",
+        explain: "Distinguir la función de la línea del Ecuador."
+      },
+      {
+        id: "q11",
+        topic: "Hemisferios",
+        type: "radio",
+        prompt: "11) El meridiano de Greenwich (0°) divide la Tierra en...",
+        options: [
+          "Hemisferio Norte y Hemisferio Sur",
+          "Hemisferio Este y Hemisferio Oeste",
+          "Polo Norte y Polo Sur"
+        ],
+        answer: "Hemisferio Este y Hemisferio Oeste",
+        explain: "Distinguir la función del meridiano de Greenwich."
+      },
+      {
+        id: "q12",
+        topic: "Desplazamiento",
+        type: "radio",
+        prompt: "12) Si estás en una cuadrícula y te mueves 2 cuadros al Este y 1 cuadro al Norte, ¿qué hiciste?",
+        options: [
+          "Un desplazamiento usando puntos cardinales",
+          "Un cambio de continente",
+          "Una medición de latitud"
+        ],
+        answer: "Un desplazamiento usando puntos cardinales",
+        explain: "Aplicar puntos cardinales en desplazamientos en cuadrícula."
+      },
+      {
+        id: "q13",
+        topic: "Cuadrícula visual",
+        type: "radio",
+        prompt: "13) Observa la cuadrícula: ¿en qué coordenada está la estrella?",
+        image: "img-cuadricula-coordenada.svg",
+        imageAlt: "Cuadrícula con coordenadas A-B-C y 1-2-3, con una estrella en la casilla B3",
+        imageCaption: "Usa columna (letra) y fila (número).",
+        options: ["B3", "C2", "A3"],
+        answer: "B3",
+        explain: "Primero ubica columna B y luego fila 3."
+      },
+      {
+        id: "q14",
+        topic: "Desplazamiento visual",
+        type: "radio",
+        prompt: "14) En la imagen, se parte en A1 y se avanza 2 al Este y 1 al Norte. ¿Dónde termina?",
+        image: "img-cuadricula-desplazamiento.svg",
+        imageAlt: "Cuadrícula con punto de inicio en A1 y flechas de desplazamiento",
+        imageCaption: "Recuerda: Este = derecha, Norte = arriba.",
+        options: ["C2", "B2", "C3"],
+        answer: "C2",
+        explain: "Desde A1 avanzas a B1, luego C1 y subes a C2."
+      },
+      {
+        id: "q15",
+        topic: "Plano visual",
+        type: "radio",
+        prompt: "15) Observa el plano de la casa: ¿qué habitación está al oeste de la Cocina?",
+        image: "img-plano-casa.svg",
+        imageAlt: "Plano simple de una casa con habitaciones etiquetadas",
+        imageCaption: "Oeste corresponde a la izquierda en este plano.",
+        options: ["Living", "Baño", "Comedor"],
+        answer: "Living",
+        explain: "La cocina está al centro-derecha y el living queda inmediatamente a su oeste."
+      }
+    ];
+
+    const improveTips = {
+      "Puntos cardinales": "Practicar con una rosa de los vientos y repetir: Norte, Sur, Este y Oeste.",
+      "Rosa de los vientos": "Reconocer en imágenes la rosa de los vientos y ubicar cada punto cardinal.",
+      "Cuadrícula": "Hacer 5 ejercicios: fila = horizontal, columna = vertical.",
+      "Plano": "Dibujar el plano simple de la casa y ubicar cocina, baño y dormitorios.",
+      "Continentes": "Repasar la lista de continentes con un planisferio.",
+      "Océanos": "Repasar la lista de océanos mirando un mapa mundial.",
+      "Paralelos": "Recordar: paralelos = líneas horizontales.",
+      "Meridianos": "Recordar: meridianos = líneas verticales que van de polo a polo.",
+      "Hemisferios": "Practicar: Ecuador divide Norte/Sur y Greenwich divide Este/Oeste.",
+      "Desplazamiento": "Resolver rutas cortas en cuadrículas usando N, S, E y O.",
+      "Cuadrícula visual": "Practicar coordenadas como A1, B2, C3 en cuadrículas de 3x3.",
+      "Desplazamiento visual": "Trazar rutas con flechas: derecha (Este), izquierda (Oeste), arriba (Norte), abajo (Sur).",
+      "Plano visual": "Leer planos simples de casa usando referencias de izquierda, derecha, arriba y abajo."
+    };
+
+    const quizForm = document.getElementById("quizForm");
+    const resultados = document.getElementById("resultados");
+
+    function normalizeText(value) {
+      return (value || "")
+        .toLowerCase()
+        .trim()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function renderQuiz() {
+      quizData.forEach((q) => {
+        const box = document.createElement("section");
+        box.className = "question";
+        box.id = `box-${q.id}`;
+
+        const tag = document.createElement("span");
+        tag.className = "q-tag";
+        tag.textContent = q.topic;
+
+        const title = document.createElement("h3");
+        title.textContent = q.prompt;
+
+        box.appendChild(tag);
+        box.appendChild(title);
+
+        if (q.image) {
+          const figure = document.createElement("figure");
+          figure.className = "question-figure";
+
+          const img = document.createElement("img");
+          img.src = q.image;
+          img.alt = q.imageAlt || "Imagen de apoyo";
+
+          figure.appendChild(img);
+
+          if (q.imageCaption) {
+            const cap = document.createElement("figcaption");
+            cap.textContent = q.imageCaption;
+            figure.appendChild(cap);
+          }
+
+          box.appendChild(figure);
+        }
+
+        if (q.type === "radio") {
+          const options = document.createElement("div");
+          options.className = "options";
+
+          q.options.forEach((option, idx) => {
+            const id = `${q.id}-${idx}`;
+            const label = document.createElement("label");
+            label.setAttribute("for", id);
+
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.id = id;
+            input.name = q.id;
+            input.value = option;
+
+            const text = document.createElement("span");
+            text.textContent = option;
+
+            label.appendChild(input);
+            label.appendChild(text);
+            options.appendChild(label);
+          });
+
+          box.appendChild(options);
+        }
+
+        if (q.type === "text") {
+          const input = document.createElement("input");
+          input.type = "text";
+          input.name = q.id;
+          input.placeholder = "Escribe tu respuesta";
+          input.autocomplete = "off";
+          box.appendChild(input);
+        }
+
+        quizForm.appendChild(box);
+      });
+    }
+
+    function getUserAnswer(question) {
+      if (question.type === "radio") {
+        const selected = document.querySelector(`input[name='${question.id}']:checked`);
+        return selected ? selected.value : "";
+      }
+
+      if (question.type === "text") {
+        const input = document.querySelector(`input[name='${question.id}']`);
+        return input ? input.value : "";
+      }
+
+      return "";
+    }
+
+    function evaluateQuiz() {
+      let correct = 0;
+      const details = [];
+      const mistakesByTopic = {};
+
+      quizData.forEach((q) => {
+        const userAnswer = getUserAnswer(q);
+        const isCorrect = normalizeText(userAnswer) === normalizeText(q.answer);
+
+        if (isCorrect) {
+          correct += 1;
+        } else {
+          mistakesByTopic[q.topic] = (mistakesByTopic[q.topic] || 0) + 1;
+        }
+
+        details.push({
+          prompt: q.prompt,
+          topic: q.topic,
+          userAnswer: userAnswer || "(sin responder)",
+          correctAnswer: q.answer,
+          isCorrect,
+          explain: q.explain
+        });
+      });
+
+      const total = quizData.length;
+      const wrong = total - correct;
+      const percentage = Math.round((correct / total) * 100);
+
+      let reviewHtml = "";
+      details.forEach((d) => {
+        reviewHtml += `<p class='${d.isCorrect ? "item-ok" : "item-bad"}'>` +
+          `${d.isCorrect ? "✓" : "✗"} ${d.prompt}<br>` +
+          `Tu respuesta: <strong>${d.userAnswer}</strong><br>` +
+          `Respuesta correcta: <strong>${d.correctAnswer}</strong>` +
+          `${d.isCorrect ? "" : `<br>Sugerencia: ${d.explain}`}` +
+          `</p>`;
+      });
+
+      const improveTopics = Object.keys(mistakesByTopic)
+        .sort((a, b) => mistakesByTopic[b] - mistakesByTopic[a])
+        .slice(0, 4);
+
+      let improveHtml = "<p>Muy bien, no hubo errores. Puedes subir la dificultad con preguntas de aplicación.</p>";
+      if (improveTopics.length > 0) {
+        improveHtml = "<ul>" + improveTopics
+          .map((topic) => `<li><strong>${topic}:</strong> ${improveTips[topic] || "Repasar este contenido."}</li>`)
+          .join("") + "</ul>";
+      }
+
+      resultados.innerHTML = `
+        <h2>Resultados</h2>
+        <span class="pill ok">Buenas: ${correct}</span>
+        <span class="pill bad">Malas: ${wrong}</span>
+        <span class="pill neutral">Logro: ${percentage}%</span>
+
+        <div class="improve">
+          <strong>Que mejorar:</strong>
+          ${improveHtml}
+        </div>
+
+        <div class="review">
+          <strong>Revision pregunta por pregunta:</strong>
+          ${reviewHtml}
+        </div>
+
+        <p class="footer-note">Tip: si quieres, imprime esta pagina o repite la prueba para seguir practicando.</p>
+      `;
+      resultados.style.display = "block";
+      resultados.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function resetQuiz() {
+      quizForm.reset();
+      resultados.style.display = "none";
+      resultados.innerHTML = "";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    document.getElementById("btnEvaluar").addEventListener("click", evaluateQuiz);
+    document.getElementById("btnReiniciar").addEventListener("click", resetQuiz);
+
+    renderQuiz();
+  </script>
+</body>
+</html>

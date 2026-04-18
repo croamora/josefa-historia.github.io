@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f8fcff"/>
+  <circle cx="450" cy="260" r="170" fill="#ffffff" stroke="#b9cfda" stroke-width="3"/>
+  <line x1="450" y1="70" x2="450" y2="450" stroke="#7ca0b5" stroke-width="3"/>
+  <line x1="260" y1="260" x2="640" y2="260" stroke="#7ca0b5" stroke-width="3"/>
+
+  <polygon points="450,85 420,180 480,180" fill="#0f8f8a"/>
+  <polygon points="450,435 420,340 480,340" fill="#3f7bb4"/>
+  <polygon points="275,260 370,230 370,290" fill="#f0a124"/>
+  <polygon points="625,260 530,230 530,290" fill="#d85757"/>
+
+  <text x="450" y="45" text-anchor="middle" font-size="38" font-family="Trebuchet MS, Arial" fill="#0f8f8a" font-weight="700">N</text>
+  <text x="450" y="500" text-anchor="middle" font-size="38" font-family="Trebuchet MS, Arial" fill="#3f7bb4" font-weight="700">S</text>
+  <text x="230" y="273" text-anchor="middle" font-size="38" font-family="Trebuchet MS, Arial" fill="#f0a124" font-weight="700">O</text>
+  <text x="670" y="273" text-anchor="middle" font-size="38" font-family="Trebuchet MS, Arial" fill="#d85757" font-weight="700">E</text>
+
+  <text x="450" y="255" text-anchor="middle" font-size="18" font-family="Trebuchet MS, Arial" fill="#395365">ROSA DE LOS VIENTOS</text>
+  <text x="450" y="278" text-anchor="middle" font-size="14" font-family="Trebuchet MS, Arial" fill="#5a7487">Puntos cardinales principales</text>
+</svg>

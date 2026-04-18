@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f8fbff"/>
+  <text x="450" y="56" text-anchor="middle" font-size="28" font-family="Trebuchet MS, Arial" fill="#2e4d62" font-weight="700">Plano simple de una casa</text>
+
+  <g transform="translate(180,90)">
+    <rect x="0" y="0" width="540" height="340" fill="#ffffff" stroke="#90aebf" stroke-width="4"/>
+
+    <rect x="0" y="0" width="360" height="120" fill="#eaf4ff" stroke="#90aebf" stroke-width="3"/>
+    <text x="180" y="68" text-anchor="middle" font-size="26" font-family="Trebuchet MS, Arial" fill="#35566a" font-weight="700">Dormitorio</text>
+
+    <rect x="360" y="0" width="180" height="120" fill="#fff0d9" stroke="#90aebf" stroke-width="3"/>
+    <text x="450" y="68" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#6d4b00" font-weight="700">Baño</text>
+
+    <rect x="0" y="120" width="180" height="110" fill="#f2f8e8" stroke="#90aebf" stroke-width="3"/>
+    <text x="90" y="182" text-anchor="middle" font-size="23" font-family="Trebuchet MS, Arial" fill="#406037" font-weight="700">Dorm.</text>
+
+    <rect x="180" y="120" width="180" height="110" fill="#e7f8f5" stroke="#90aebf" stroke-width="3"/>
+    <text x="270" y="182" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#1f5f57" font-weight="700">Living</text>
+
+    <rect x="360" y="120" width="180" height="110" fill="#ffe9e9" stroke="#90aebf" stroke-width="3"/>
+    <text x="450" y="182" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#8f3333" font-weight="700">Cocina</text>
+
+    <rect x="0" y="230" width="360" height="110" fill="#eef7ff" stroke="#90aebf" stroke-width="3"/>
+    <text x="180" y="292" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#315777" font-weight="700">Patio</text>
+
+    <rect x="360" y="230" width="180" height="110" fill="#fff3e8" stroke="#90aebf" stroke-width="3"/>
+    <text x="450" y="292" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#7a4f20" font-weight="700">Comedor</text>
+  </g>
+
+  <text x="100" y="255" font-size="24" font-family="Trebuchet MS, Arial" fill="#2f4d62" font-weight="700">Oeste</text>
+  <text x="760" y="255" font-size="24" font-family="Trebuchet MS, Arial" fill="#2f4d62" font-weight="700">Este</text>
+  <text x="450" y="488" text-anchor="middle" font-size="20" font-family="Trebuchet MS, Arial" fill="#4e6b7d">Referencia: Oeste = izquierda, Este = derecha</text>
+</svg>
