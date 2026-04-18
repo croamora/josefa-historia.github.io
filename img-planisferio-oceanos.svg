@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#e8f6ff"/>
+
+  <text x="600" y="54" text-anchor="middle" font-size="34" font-family="Trebuchet MS, Arial" fill="#24485f" font-weight="700">Planisferio simplificado: continentes y océanos</text>
+
+  <rect x="40" y="90" width="1120" height="520" rx="22" fill="#d9f0ff" stroke="#9fc5db" stroke-width="3"/>
+
+  <!-- Continentes (dibujo esquemático para práctica escolar) -->
+  <path d="M135,180 L250,145 L300,170 L292,235 L248,280 L230,330 L180,360 L120,330 L105,270 L120,220 Z"
+    fill="#f8d9a6" stroke="#c79b62" stroke-width="3"/>
+  <path d="M290,325 L345,350 L360,410 L330,500 L290,570 L245,560 L228,495 L240,430 Z"
+    fill="#f8d9a6" stroke="#c79b62" stroke-width="3"/>
+
+  <path d="M515,160 L620,130 L705,165 L710,230 L655,285 L570,280 L520,225 Z"
+    fill="#f8d9a6" stroke="#c79b62" stroke-width="3"/>
+  <path d="M610,290 L680,302 L710,360 L690,450 L640,520 L575,495 L545,420 L565,350 Z"
+    fill="#f8d9a6" stroke="#c79b62" stroke-width="3"/>
+
+  <path d="M700,190 L770,160 L860,175 L930,205 L980,250 L960,320 L900,345 L840,320 L805,360 L770,330 L760,280 L715,240 Z"
+    fill="#f8d9a6" stroke="#c79b62" stroke-width="3"/>
+  <path d="M870,390 L930,390 L980,430 L970,490 L910,520 L860,500 L850,450 Z"
+    fill="#f8d9a6" stroke="#c79b62" stroke-width="3"/>
+
+  <path d="M180,585 L1020,585 L980,620 L210,620 Z"
+    fill="#f3e1b3" stroke="#c79b62" stroke-width="3"/>
+
+  <!-- Nombres de continentes -->
+  <text x="220" y="205" text-anchor="middle" font-size="22" font-family="Trebuchet MS, Arial" fill="#6d4c1c" font-weight="700">AMÉRICA</text>
+  <text x="620" y="145" text-anchor="middle" font-size="22" font-family="Trebuchet MS, Arial" fill="#6d4c1c" font-weight="700">EUROPA</text>
+  <text x="635" y="338" text-anchor="middle" font-size="22" font-family="Trebuchet MS, Arial" fill="#6d4c1c" font-weight="700">ÁFRICA</text>
+  <text x="860" y="190" text-anchor="middle" font-size="22" font-family="Trebuchet MS, Arial" fill="#6d4c1c" font-weight="700">ASIA</text>
+  <text x="920" y="420" text-anchor="middle" font-size="22" font-family="Trebuchet MS, Arial" fill="#6d4c1c" font-weight="700">OCEANÍA</text>
+  <text x="600" y="612" text-anchor="middle" font-size="22" font-family="Trebuchet MS, Arial" fill="#6d4c1c" font-weight="700">ANTÁRTICA</text>
+
+  <!-- Nombres de océanos -->
+  <text x="70" y="355" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">OCÉANO</text>
+  <text x="70" y="382" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">PACÍFICO</text>
+
+  <text x="430" y="340" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">OCÉANO</text>
+  <text x="430" y="367" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">ATLÁNTICO</text>
+
+  <text x="790" y="475" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">OCÉANO</text>
+  <text x="790" y="502" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">ÍNDICO</text>
+
+  <text x="1080" y="360" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">OCÉANO</text>
+  <text x="1080" y="387" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">PACÍFICO</text>
+
+  <text x="600" y="112" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">OCÉANO GLACIAL ÁRTICO</text>
+  <text x="600" y="653" text-anchor="middle" font-size="24" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">OCÉANO AUSTRAL</text>
+
+  <!-- Países de referencia -->
+  <circle cx="252" cy="502" r="7" fill="#d94a4a"/>
+  <text x="264" y="500" font-size="18" font-family="Trebuchet MS, Arial" fill="#213f53" font-weight="700">Chile</text>
+
+  <circle cx="318" cy="505" r="7" fill="#d94a4a"/>
+  <text x="330" y="525" font-size="18" font-family="Trebuchet MS, Arial" fill="#213f53" font-weight="700">Argentina</text>
+
+  <circle cx="820" cy="364" r="7" fill="#d94a4a"/>
+  <text x="832" y="360" font-size="18" font-family="Trebuchet MS, Arial" fill="#213f53" font-weight="700">India</text>
+
+  <circle cx="954" cy="265" r="7" fill="#d94a4a"/>
+  <text x="965" y="258" font-size="18" font-family="Trebuchet MS, Arial" fill="#213f53" font-weight="700">Japón</text>
+
+  <!-- Mini rosa de los vientos -->
+  <g transform="translate(1040,125)">
+    <circle cx="0" cy="0" r="58" fill="#ffffff" stroke="#8fb6ca" stroke-width="3"/>
+    <line x1="0" y1="-47" x2="0" y2="47" stroke="#709ab1" stroke-width="3"/>
+    <line x1="-47" y1="0" x2="47" y2="0" stroke="#709ab1" stroke-width="3"/>
+    <text x="0" y="-63" text-anchor="middle" font-size="20" font-family="Trebuchet MS, Arial" fill="#0b817d" font-weight="700">N</text>
+    <text x="0" y="80" text-anchor="middle" font-size="20" font-family="Trebuchet MS, Arial" fill="#356ea1" font-weight="700">S</text>
+    <text x="-65" y="6" text-anchor="middle" font-size="20" font-family="Trebuchet MS, Arial" fill="#d08a1f" font-weight="700">O</text>
+    <text x="65" y="6" text-anchor="middle" font-size="20" font-family="Trebuchet MS, Arial" fill="#c84a4a" font-weight="700">E</text>
+  </g>
+</svg>

@@ -105,7 +105,7 @@
 
     .question-figure img {
       width: 100%;
-      max-height: 230px;
+      max-height: 320px;
       object-fit: contain;
       display: block;
       background: #fbfdff;
@@ -450,6 +450,78 @@
         options: ["Living", "Baño", "Comedor"],
         answer: "Living",
         explain: "La cocina está al centro-derecha y el living queda inmediatamente a su oeste."
+      },
+      {
+        id: "q16",
+        topic: "Océanos en planisferio",
+        type: "radio",
+        prompt: "16) Observa el planisferio: ¿qué océano está al oeste de Chile?",
+        image: "img-planisferio-oceanos.svg",
+        imageAlt: "Planisferio simplificado con continentes, países de referencia y nombres de océanos",
+        imageCaption: "Usa los puntos cardinales para orientarte en el mapa.",
+        options: ["Océano Pacífico", "Océano Atlántico", "Océano Índico"],
+        answer: "Océano Pacífico",
+        explain: "Chile está al borde oeste de Sudamérica, junto al océano Pacífico."
+      },
+      {
+        id: "q17",
+        topic: "Océanos en planisferio",
+        type: "radio",
+        prompt: "17) ¿Qué océano está al este de Argentina?",
+        image: "img-planisferio-oceanos.svg",
+        imageAlt: "Planisferio simplificado con continentes, países de referencia y nombres de océanos",
+        imageCaption: "Busca Argentina y luego mira hacia el Este (derecha).",
+        options: ["Océano Atlántico", "Océano Pacífico", "Océano Austral"],
+        answer: "Océano Atlántico",
+        explain: "Argentina limita por el este con el océano Atlántico."
+      },
+      {
+        id: "q18",
+        topic: "Océanos en planisferio",
+        type: "radio",
+        prompt: "18) ¿Qué océano está al sur de India?",
+        image: "img-planisferio-oceanos.svg",
+        imageAlt: "Planisferio simplificado con continentes, países de referencia y nombres de océanos",
+        imageCaption: "Ubica India y mira hacia abajo (Sur).",
+        options: ["Océano Índico", "Océano Glacial Ártico", "Océano Atlántico"],
+        answer: "Océano Índico",
+        explain: "India se ubica sobre el océano Índico."
+      },
+      {
+        id: "q19",
+        topic: "Océanos en planisferio",
+        type: "radio",
+        prompt: "19) ¿Qué océano está al norte de la Antártica en este mapa?",
+        image: "img-planisferio-oceanos.svg",
+        imageAlt: "Planisferio simplificado con continentes, países de referencia y nombres de océanos",
+        imageCaption: "Mira la franja más al sur del planisferio y el océano que la rodea.",
+        options: ["Océano Austral", "Océano Glacial Ártico", "Océano Pacífico"],
+        answer: "Océano Austral",
+        explain: "La Antártica está rodeada por el océano Austral."
+      },
+      {
+        id: "q20",
+        topic: "Océanos en planisferio",
+        type: "radio",
+        prompt: "20) ¿Qué océano está entre América y Europa-África?",
+        image: "img-planisferio-oceanos.svg",
+        imageAlt: "Planisferio simplificado con continentes, países de referencia y nombres de océanos",
+        imageCaption: "Observa el océano central entre esos continentes.",
+        options: ["Océano Atlántico", "Océano Pacífico", "Océano Índico"],
+        answer: "Océano Atlántico",
+        explain: "El océano Atlántico separa América de Europa y África."
+      },
+      {
+        id: "q21",
+        topic: "Océanos en planisferio",
+        type: "radio",
+        prompt: "21) ¿Qué océano está al este de Japón?",
+        image: "img-planisferio-oceanos.svg",
+        imageAlt: "Planisferio simplificado con continentes, países de referencia y nombres de océanos",
+        imageCaption: "Ubica Japón y mira hacia el Este (derecha).",
+        options: ["Océano Pacífico", "Océano Índico", "Océano Atlántico"],
+        answer: "Océano Pacífico",
+        explain: "Japón está junto al océano Pacífico, hacia el borde oriental de Asia."
       }
     ];
 
@@ -466,7 +538,8 @@
       "Desplazamiento": "Resolver rutas cortas en cuadrículas usando N, S, E y O.",
       "Cuadrícula visual": "Practicar coordenadas como A1, B2, C3 en cuadrículas de 3x3.",
       "Desplazamiento visual": "Trazar rutas con flechas: derecha (Este), izquierda (Oeste), arriba (Norte), abajo (Sur).",
-      "Plano visual": "Leer planos simples de casa usando referencias de izquierda, derecha, arriba y abajo."
+      "Plano visual": "Leer planos simples de casa usando referencias de izquierda, derecha, arriba y abajo.",
+      "Océanos en planisferio": "Practicar con un planisferio señalando qué océano queda al norte, sur, este y oeste de distintos países."
     };
 
     const quizForm = document.getElementById("quizForm");
