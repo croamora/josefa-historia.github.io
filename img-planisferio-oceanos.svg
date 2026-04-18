@@ -7,7 +7,7 @@
     <rect x="0" y="0" width="1052" height="560" rx="22" fill="#dff2ff" stroke="#9cc2d9" stroke-width="3"/>
 
     <!-- Mapa mundial real (base Wikimedia) -->
-    <image href="img-world-map.svg" x="34" y="24" width="984" height="512" preserveAspectRatio="xMidYMid meet"/>
+    <image href="img-world-map.png" x="34" y="24" width="984" height="512" preserveAspectRatio="xMidYMid meet"/>
 
     <!-- Etiquetas de océanos -->
     <text x="120" y="300" font-size="26" font-family="Trebuchet MS, Arial" fill="#2b6f9e" font-weight="700">OCÉANO PACÍFICO</text>
